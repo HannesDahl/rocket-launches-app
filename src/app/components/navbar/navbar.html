@@ -1,0 +1,16 @@
+<ion-toolbar color="primary">
+	<ion-title>Rocket Launches</ion-title>
+	<button ion-button icon-only float-right (click)="openMenu()">
+		<ion-icon name="menu"></ion-icon>
+	</button>
+</ion-toolbar>
+
+<ion-menu type="overlay" side="right" [content]="mycontent">
+	<ion-content padding>
+		<ion-list>
+			<p>some menu content, could be list items</p>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>

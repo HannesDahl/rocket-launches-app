@@ -1,0 +1,19 @@
+<ion-header>
+	<navbar></navbar>
+</ion-header>
+
+<ion-content padding class="main-wrapper card-background-page">
+	<ion-card color="secondary" *ngFor="let launch of launches">
+
+		<ion-card-header>
+			<a href="{{ launch.rocket.wikiURL }}" target="_blank" class="card-header">{{ launch.name }}</a>
+		</ion-card-header>
+
+		<img src="{{ launch.rocket.imageURL }}">
+
+		<ion-card-content>
+			{{ launch.missions[0].description }}
+		</ion-card-content>
+
+	</ion-card>
+</ion-content>
