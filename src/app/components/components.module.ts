@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar';
+import { LaunchCardComponent } from './launch-card/launch-card';
 @NgModule({
-	declarations: [NavbarComponent,
-    NavbarComponent],
+	declarations: [NavbarComponent, LaunchCardComponent],
 	imports: [],
-	exports: [NavbarComponent,
-    NavbarComponent]
+	exports: [NavbarComponent, LaunchCardComponent]
 })
-export class ComponentsModule {}
+export class ComponentsModule { }

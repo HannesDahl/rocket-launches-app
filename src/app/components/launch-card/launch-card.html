@@ -1,0 +1,11 @@
+<ion-card color="secondary">
+	<ion-card-header>
+		<a href="{{ launch.rocket.wikiURL }}" target="_blank" class="card-header">{{ launch.name }}</a>
+	</ion-card-header>
+	<a (click)="openLaunchPage(launch.id)">
+		<img src="{{ launch.rocket.imageURL }}">
+		<ion-card-content>
+			<p class="card-paragraph">{{ launch.missions[0].description }}</p>
+		</ion-card-content>
+	</a>
+</ion-card>

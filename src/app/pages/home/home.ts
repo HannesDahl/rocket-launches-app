@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { ApiProvider } from '../../providers/api';
 
 @Component({
@@ -6,7 +6,7 @@ import { ApiProvider } from '../../providers/api';
 	templateUrl: 'home.html'
 })
 export class HomePage {
-	public launches: any;
+	@Output() launches: any;
 
 	constructor(
 		private _api: ApiProvider

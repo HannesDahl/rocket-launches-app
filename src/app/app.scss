@@ -18,3 +18,15 @@
 ion-content {
 	background-color: #282828 !important;
 }
+
+.card-header {
+	color: #fff;
+	text-decoration: none;
+}
+
+.card-paragraph {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}

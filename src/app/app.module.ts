@@ -6,15 +6,23 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from './pages/home/home';
-import { NavbarComponent } from './components/navbar/navbar';
 import { ApiProvider } from './providers/api';
+
+// PAGES
+import { HomePage } from './pages/home/home';
+import { LaunchPage } from './pages/launch/launch';
+
+// COMPONENTS
+import { NavbarComponent } from './components/navbar/navbar';
+import { LaunchCardComponent } from './components/launch-card/launch-card';
 
 @NgModule({
 	declarations: [
 		MyApp,
 		HomePage,
-		NavbarComponent
+		LaunchPage,
+		NavbarComponent,
+		LaunchCardComponent
 	],
 	imports: [
 		BrowserModule,
@@ -24,7 +32,8 @@ import { ApiProvider } from './providers/api';
 	bootstrap: [IonicApp],
 	entryComponents: [
 		MyApp,
-		HomePage
+		HomePage,
+		LaunchPage
 	],
 	providers: [
 		StatusBar,
