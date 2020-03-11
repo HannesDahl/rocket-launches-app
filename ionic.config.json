@@ -1,7 +1,7 @@
 {
-  "name": "IonicTestApp",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
+	"name": "Rocket launches app",
+	"integrations": {
+		"cordova": {}
+	},
+	"type": "ionic-angular"
 }

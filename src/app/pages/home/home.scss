@@ -1,1 +1,14 @@
+.countdown-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
+	ion-icon {
+		margin-right: 10px;
+		font-size: 2em;
+	}
+
+	p {
+		font-size: 2rem;
+	}
+}

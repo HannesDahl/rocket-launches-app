@@ -1,3 +1,14 @@
-<ion-content padding>
-	hello
-</ion-content>
+<div *ngIf="launch">
+	<ion-header>
+		<ion-toolbar color="primary">
+			<ion-icon (click)="backHome()" padding name="arrow-back"></ion-icon>
+			<ion-title text-center>{{ launch.missions[0].name }}</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content text-center>
+		<div id="map"></div>
+		<a margin-top href="{{ launch.location.pads[0].wikiURL }}"
+			target="_blank">{{ launch.location.pads[0].name }}</a>
+	</ion-content>
+</div>
