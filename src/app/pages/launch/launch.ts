@@ -13,7 +13,7 @@ import { fromLonLat } from 'ol/proj.js';
     templateUrl: 'launch.html',
 })
 export class LaunchPage {
-    private map: any;
+    public map: any;
     @Output() launch: any;
 
     constructor(
@@ -26,7 +26,7 @@ export class LaunchPage {
         let id = this.navParams.get('id');
 
         this._api.getLaunchInfo(id).subscribe((data: any) => {
-            this.launch = data.launches[0];
+            this.launch = data;
 
             console.log(this.launch);
         });
@@ -41,7 +41,7 @@ export class LaunchPage {
                 })
             ],
             view: new View({
-                center: fromLonLat([this.launch.location.pads[0].longitude, this.launch.location.pads[0].latitude]),
+                center: fromLonLat([0, 0]),
                 zoom: 15
             })
         });

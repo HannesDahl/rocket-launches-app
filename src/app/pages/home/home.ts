@@ -15,16 +15,22 @@ export class HomePage {
 
 	ngOnInit(): void {
 		this._api.getRocketLaunches().subscribe((data: any) => {
-			this.launches = data.launches;
-			console.log(this.launches);
+			this.launches = data;
+
+			this.countDown();
 			this.countDownInterval = setInterval(() => {
 				this.countDown();
-			}, 1000)
+			}, 1000);
 		});
 	}
 
+	private checkNumber(num) {
+		if (num < 10) return '0' + num;
+		else return num
+	}
+
 	private countDown() {
-		let countDownDate = new Date(this.launches[0].net).getTime();
+		let countDownDate = new Date(this.launches[0].launch_date_local).getTime();
 		let now = new Date().getTime();
 		let distance = countDownDate - now;
 
@@ -33,8 +39,8 @@ export class HomePage {
 		let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 		let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-		document.getElementById("nextLaunchCountdown").innerHTML = days + "d " + hours + "h "
-			+ minutes + "m " + seconds + "s ";
+		document.getElementById("nextLaunchCountdown").innerHTML = this.checkNumber(days) + "d " + this.checkNumber(hours) + "h "
+			+ this.checkNumber(minutes) + "m " + this.checkNumber(seconds) + "s ";
 
 		if (distance < 0) {
 			clearInterval(this.countDownInterval);

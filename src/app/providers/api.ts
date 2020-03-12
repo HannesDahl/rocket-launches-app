@@ -9,12 +9,12 @@ export class ApiProvider {
     ) { }
 
     getRocketLaunches() {
-        const url = 'https://launchlibrary.net/1.4.1/launch/next/10';
+        const url = 'https://api.spacexdata.com/v3/launches/upcoming';
         return this._http.get(url);
     }
 
     getLaunchInfo(id) {
-        const url = `https://launchlibrary.net/1.4/launch/${id}`;
+        const url = `https://api.spacexdata.com/v3/launches/${id}`;
         return this._http.get(url);
     }
 

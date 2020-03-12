@@ -1,1 +1,16 @@
+launch-card {
+	span {
+		font-size: 1rem;
+		color: #ccc !important;
+	}
 
+	ion-icon {
+		font-size: 3.4rem;
+		color: #4183f1 !important;
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+	}
+}

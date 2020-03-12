@@ -8,17 +8,14 @@ import { LaunchPage } from '../../pages/launch/launch';
 })
 export class LaunchCardComponent {
     @Input() public launch;
-    public id: number;
 
     constructor(
         public navCtrl: NavController
     ) { }
 
     public openLaunchPage(id) {
-        this.id = id
-        console.log(this.id);
         this.navCtrl.push(LaunchPage, {
-            id: this.id
+            id: id
         });
     }
 }

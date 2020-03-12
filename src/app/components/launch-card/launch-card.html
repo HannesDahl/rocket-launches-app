@@ -1,11 +1,16 @@
 <ion-card color="secondary">
-	<ion-card-header>
-		<a href="{{ launch.rocket.wikiURL }}" target="_blank" class="card-header">{{ launch.name }}</a>
-	</ion-card-header>
-	<a (click)="openLaunchPage(launch.id)">
-		<img src="{{ launch.rocket.imageURL }}">
+	<a (click)="openLaunchPage(launch.flight_number)">
+		<ion-card-header>
+			<span>{{ launch.rocket.rocket_name }} {{ launch.rocket.type }}, Block
+				{{ launch.rocket.first_stage.cores[0].block }}</span><br>
+			<a href="#" target="_blank" class="card-header">{{ launch.mission_name }}</a>
+		</ion-card-header>
 		<ion-card-content>
-			<p class="card-paragraph">{{ launch.missions[0].description }}</p>
+			<p class="card-paragraph"></p>
+			<div class="row">
+				<ion-icon name="calendar"></ion-icon>
+				<p margin-left text-uppercase>save</p>
+			</div>
 		</ion-card-content>
 	</a>
 </ion-card>

@@ -1,14 +1,24 @@
 <div *ngIf="launch">
 	<ion-header>
 		<ion-toolbar color="primary">
-			<ion-icon (click)="backHome()" padding name="arrow-back"></ion-icon>
-			<ion-title text-center>{{ launch.missions[0].name }}</ion-title>
+			<ion-icon float-left padding (click)="backHome()" name="arrow-back"></ion-icon>
+			<ion-title text-center>{{ launch.mission_name }}</ion-title>
 		</ion-toolbar>
 	</ion-header>
 
 	<ion-content text-center>
 		<div id="map"></div>
-		<a margin-top href="{{ launch.location.pads[0].wikiURL }}"
-			target="_blank">{{ launch.location.pads[0].name }}</a>
+		<ion-card text-left padding color="secondary">
+			<div class="row">
+				<img src="{{ launch.links.mission_patch_small }}" alt="{{ launch.mission_name }}" style="width: 70px;">
+				<div margin-left>
+					<span>{{ launch.launch_site.site_name }}</span>
+					<h1>{{ launch.mission_name }}</h1>
+					<p>{{ launch.launch_date_local }}</p>
+				</div>
+			</div>
+			<div margin-top class="line"></div>
+			<p margin-top>{{ launch.details }}</p>
+		</ion-card>
 	</ion-content>
 </div>

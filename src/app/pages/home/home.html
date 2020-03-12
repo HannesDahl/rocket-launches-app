@@ -4,8 +4,8 @@
 
 <ion-content padding class="main-wrapper card-background-page">
 	<div class="countdown-wrapper">
-		<ion-icon name="stopwatch-outline"></ion-icon>
-		<p text-center id="nextLaunchCountdown"></p>
+		<i class="material-icons">timer</i>
+		<p text-center id="nextLaunchCountdown">00:00:00:00</p>
 	</div>
 	<launch-card *ngFor="let launch of launches" [launch]="launch"></launch-card>
 </ion-content>
