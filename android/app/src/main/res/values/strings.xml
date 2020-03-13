@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SpaceX Launches</string>
+    <string name="title_activity_main">SpaceX Launches</string>
+    <string name="package_name">com.spacex.launches</string>
+    <string name="custom_url_scheme">com.spacex.launches</string>
+</resources>

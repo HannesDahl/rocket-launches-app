@@ -8,10 +8,17 @@ import { LaunchPage } from '../../pages/launch/launch';
 })
 export class LaunchCardComponent {
     @Input() public launch;
+    public launchDate: any;
 
     constructor(
-        public navCtrl: NavController
+        public navCtrl: NavController,
     ) { }
+
+    ngOnInit() {
+        let launchDateTime = new Date(this.launch.launch_date_local);
+        let launchDateValue = launchDateTime;
+        this.launchDate = launchDateValue;
+    }
 
     public openLaunchPage(id) {
         this.navCtrl.push(LaunchPage, {

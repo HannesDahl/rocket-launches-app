@@ -10,7 +10,7 @@ export class HomePage {
 	private countDownInterval: any;
 
 	constructor(
-		private _api: ApiProvider
+		private _api: ApiProvider,
 	) { }
 
 	ngOnInit(): void {

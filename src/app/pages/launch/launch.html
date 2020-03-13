@@ -10,7 +10,8 @@
 		<div id="map"></div>
 		<ion-card text-left padding color="secondary">
 			<div class="row">
-				<img src="{{ launch.links.mission_patch_small }}" alt="{{ launch.mission_name }}" style="width: 70px;">
+				<img *ngIf="launch.links.mission_patch_small" src="{{ launch.links.mission_patch_small }}"
+					alt="{{ launch.mission_name }}" style="width: 70px;">
 				<div margin-left>
 					<span>{{ launch.launch_site.site_name }}</span>
 					<h1>{{ launch.mission_name }}</h1>

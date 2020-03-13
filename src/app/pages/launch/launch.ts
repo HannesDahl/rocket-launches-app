@@ -1,7 +1,6 @@
 import { Component, Output } from '@angular/core';
 import { IonicPage, NavParams, NavController } from 'ionic-angular';
 import { ApiProvider } from '../../providers/api';
-import { HomePage } from '../home/home';
 import { Map, View } from 'ol';
 import Tile from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
@@ -13,8 +12,9 @@ import { fromLonLat } from 'ol/proj.js';
     templateUrl: 'launch.html',
 })
 export class LaunchPage {
-    public map: any;
     @Output() launch: any;
+    public map: any;
+    private coords: any;
 
     constructor(
         public _api: ApiProvider,
@@ -28,7 +28,16 @@ export class LaunchPage {
         this._api.getLaunchInfo(id).subscribe((data: any) => {
             this.launch = data;
 
-            console.log(this.launch);
+            switch (this.launch.launch_site.site_id) {
+                case 'ksc_lc_39a':
+                    this.coords = [-80.6026042562, 28.6050359132];
+                    break;
+                case 'ccafs_slc_40':
+                    this.coords = [-80.57718, 28.562106];
+                    break;
+                case '':
+                    this.coords = [-120.6107, 34.6320];
+            }
         });
     }
 
@@ -41,14 +50,14 @@ export class LaunchPage {
                 })
             ],
             view: new View({
-                center: fromLonLat([0, 0]),
+                center: fromLonLat(this.coords),
                 zoom: 15
             })
         });
     }
 
     public backHome() {
-        this.navCtrl.push(HomePage);
+        this.navCtrl.pop();
     }
 
 }

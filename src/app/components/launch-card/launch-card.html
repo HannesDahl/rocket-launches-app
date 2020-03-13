@@ -3,14 +3,14 @@
 		<ion-card-header>
 			<span>{{ launch.rocket.rocket_name }} {{ launch.rocket.type }}, Block
 				{{ launch.rocket.first_stage.cores[0].block }}</span><br>
-			<a href="#" target="_blank" class="card-header">{{ launch.mission_name }}</a>
+			<h2 href="#" target="_blank" class="card-header">{{ launch.mission_name }}</h2>
+			<p class="card-para">{{ launchDate }}</p>
 		</ion-card-header>
-		<ion-card-content>
-			<p class="card-paragraph"></p>
-			<div class="row">
-				<ion-icon name="calendar"></ion-icon>
-				<p margin-left text-uppercase>save</p>
-			</div>
-		</ion-card-content>
 	</a>
+	<ion-card-content>
+		<a href="#" class="row">
+			<ion-icon name="calendar"></ion-icon>
+			<p margin-left text-uppercase>save</p>
+		</a>
+	</ion-card-content>
 </ion-card>
