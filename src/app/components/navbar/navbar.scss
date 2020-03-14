@@ -1,5 +1,18 @@
 ion-menu {
 	height: 100vh;
+
+	ion-item {
+		background-color: #282828 !important;
+
+		ion-label {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.list-md .item-block .item-inner {
+		border-bottom: 0;
+	}
 }
 
 navbar * {

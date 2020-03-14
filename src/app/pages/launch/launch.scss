@@ -4,11 +4,65 @@ page-launch ion-content {
 
 	ion-card {
 		margin-top: -50px !important;
-		margin-bottom: 100px !important;
+		margin-bottom: 75px !important;
 		position: sticky;
 
 		span {
 			color: #ddd !important;
+		}
+
+		h2 {
+			font-size: 3rem !important;
+		}
+
+		.second-stage-wrapper,
+		.first-stage-wrapper p {
+			font-size: 1.6rem;
+		}
+
+		.cargo-stage-wrapper {
+			position: absolute;
+			top: 15%;
+			left: 20%;
+			font-size: 2rem;
+			width: 60%;
+
+			.line {
+				margin: 0 0 5px 0 !important;
+			}
+		}
+
+		.second-stage-wrapper {
+			position: absolute;
+			top: 35%;
+			left: 20%;
+			font-size: 2rem;
+			width: 60%;
+
+			.line {
+				margin: 0 0 5px 0 !important;
+			}
+		}
+
+		.first-stage-wrapper {
+			position: absolute;
+			top: 65%;
+			left: 20%;
+			font-size: 2rem;
+			width: 60%;
+
+			.line {
+				margin: 0 0 5px 0 !important;
+			}
+		}
+
+		ul {
+			list-style: circle;
+
+			li {
+				margin: 10px 0;
+				font-size: 1.6rem;
+			}
 		}
 	}
 

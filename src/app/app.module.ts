@@ -12,6 +12,7 @@ import { ApiProvider } from './providers/api';
 // PAGES
 import { HomePage } from './pages/home/home';
 import { LaunchPage } from './pages/launch/launch';
+import { MediaPage } from './pages/media/media';
 
 // COMPONENTS
 import { NavbarComponent } from './components/navbar/navbar';
@@ -23,7 +24,8 @@ import { LaunchCardComponent } from './components/launch-card/launch-card';
 		HomePage,
 		LaunchPage,
 		NavbarComponent,
-		LaunchCardComponent
+		LaunchCardComponent,
+		MediaPage
 	],
 	imports: [
 		BrowserModule,
@@ -34,7 +36,8 @@ import { LaunchCardComponent } from './components/launch-card/launch-card';
 	entryComponents: [
 		MyApp,
 		HomePage,
-		LaunchPage
+		LaunchPage,
+		MediaPage
 	],
 	providers: [
 		StatusBar,

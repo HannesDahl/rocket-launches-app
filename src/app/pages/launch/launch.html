@@ -6,7 +6,7 @@
 		</ion-toolbar>
 	</ion-header>
 
-	<ion-content text-center>
+	<ion-content>
 		<div id="map"></div>
 		<ion-card text-left padding color="secondary">
 			<div class="row">
@@ -20,6 +20,45 @@
 			</div>
 			<div margin-top class="line"></div>
 			<p margin-top>{{ launch.details }}</p>
+		</ion-card>
+
+		<ion-card padding color="secondary">
+			<h2 text-center margin-bottom>{{ launch.rocket.rocket_name }} {{ launch.rocket.rocket_type }}</h2>
+
+			<div>
+				<div class="cargo-stage-wrapper">
+					Cargo <br>
+					<div class="line"></div>
+					<p>Type: {{ launch.rocket.second_stage.payloads[0].payload_type }}</p>
+					<p>Mass: {{ launch.rocket.second_stage.payloads[0].payload_mass_kg }}kg</p>
+					<p>Orbit target: {{ launch.rocket.second_stage.payloads[0].orbit }}</p>
+				</div>
+
+				<div class="second-stage-wrapper">
+					Second stage <br>
+					<div class="line"></div>
+					<p>Block: {{ launch.rocket.second_stage.block }}</p>
+				</div>
+
+				<div class="first-stage-wrapper">
+					First stage <br>
+					<div class="line"></div>
+					<p>Block: {{ launch.rocket.first_stage.cores[0].block }} <br>
+						Reused: {{ launch.rocket.first_stage.cores[0].reused }}</p>
+				</div>
+
+				<img float-right margin-top margin-horizontal style="width: 75px;"
+					src="assets/imgs/falcon_9_fairing_block_5.png" alt="SpaceX Falcon 9 Rocket">
+			</div>
+		</ion-card>
+
+		<ion-card padding color="secondary">
+			<h2 text-center>Links</h2>
+			<ul>
+				<li><a href="{{ launch.links.reddit_campaign }}" target="_blank">Reddit campain</a></li>
+				<li><a href="{{ launch.links.reddit_launch }}" target="_blank">Reddit launch</a></li>
+				<li><a href="{{ launch.links.video_link }}" target="_blank">YouTube livestream</a></li>
+			</ul>
 		</ion-card>
 	</ion-content>
 </div>

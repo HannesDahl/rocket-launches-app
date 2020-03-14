@@ -30,7 +30,7 @@ export class LaunchPage {
 
             switch (this.launch.launch_site.site_id) {
                 case 'ksc_lc_39a':
-                    this.coords = [-80.6026042562, 28.6050359132];
+                    this.coords = [-80.6040, 28.6080];
                     break;
                 case 'ccafs_slc_40':
                     this.coords = [-80.57718, 28.562106];
